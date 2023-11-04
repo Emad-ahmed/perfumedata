@@ -1,0 +1,127 @@
+.bottom-menu {
+	-webkit-transition: all 0.2s ease-in-out;
+	-moz-transition: all 0.2s ease-in-out;
+	-o-transition: all 0.2s ease-in-out;
+	transition: all 0.2s ease-in-out;
+	text-transform: uppercase;
+	background-color: #fff;
+	display: block;
+	width: 60px;
+	height: 60px;
+	line-height: 60px;
+	text-align: center;
+	border-radius: 50%;
+	position: fixed;
+	z-index: 10;
+	bottom: 30px;
+	left: calc(50% - 30px);
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+}
+
+body.open-card {
+	.bottom-menu {
+		transform: translateY(200%);
+	}
+}
+
+/*
+|------------------------------------------------------
+|  CSS: Swiper
+|------------------------------------------------------
+*/
+
+html, body {
+	height: 100%;
+	background: #B64DFF;
+	background: -moz-linear-gradient(left, #616EFF 0%, #B64DFF 100%);
+	background: -webkit-linear-gradient(left, #616EFF 0%, #B64DFF 100%);
+	background: linear-gradient(to right, #616EFF 0%, #B64DFF 100%);
+}
+
+body.open-card {
+	position: relative;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+
+.swiper-container {
+	padding: 80px 0;
+}
+
+.swiper-slide {
+	overflow: hidden;
+	position: relative;
+	z-index: 1;
+	height: 450px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+	background: #fff;
+	border-radius: 6px;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+	-webkit-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+	box-shadow: 0px 0px 7px 0px rgba(0, 0, 0, 0.3);
+	&.swiper-slide-active {
+		//background-color: yellow;
+		z-index: 3;
+	}
+	&.swiper-slide-prev {
+		//background-color: orange;
+		z-index: 1;
+	}
+	&.swiper-slide-next {
+		//background-color: brown;
+		z-index: 1;
+	}
+}
+
+/*
+|------------------------------------------------------
+|  CSS: Cards with Fullscreen zoom
+|------------------------------------------------------
+*/
+
+.page-container {
+	overflow: hidden;
+}
+
+.page {
+	visibility: hidden;
+	background-color: #fff;
+	border-radius: 6px;
+	cursor: pointer;
+	position: fixed;
+	z-index: 9;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-box-align: center;
+	-ms-flex-align: center;
+	-webkit-align-items: center;
+	align-items: center;
+}
